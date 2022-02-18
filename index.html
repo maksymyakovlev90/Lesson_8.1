@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson_8</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="https://fructcode.com/ru/blog/what-is-pseudo-classes-and-pseudo-elements/#h2_1" target="blanc">FructCode</a></div>
+    </header>
+    <main class="content">
+        <div class="wrapper">
+            <h1>Что такое псевдоклассы (pseudo classes) и псевдоэлементы (pseudo elements)</h1>
+            <p class="list"><strong>Содержание</strong></p>
+            <ul>
+                <li><a href="#section1"><strong>Что такое псевдоклассы (pseudo classes)</strong></a><ul>
+                    <li><a href="#section2">Псевдокласс :hover</a></li>
+                    <li><a href="#section3">Псевдокласс :active</a></li>
+                    <li><a href="#section4">Псевдокласс :focus</a></li>
+                    <li><a href="#section5">Псевдоклассы :first-child и :last-child</a></li>
+                    <li><a href="#section6">Псевдоклассы :first-of-type и :last-of-type</a></li>
+                    <li><a href="#section7">Псевдокласс :nth-child</a></li>
+                    <li><a href="#section8">Псевдокласс :not</a></li>
+                </ul></li>
+                <li><a href="#section9"><strong>Что такое псевдоэлементы (pseudo elements)</strong></a><ul>
+                    <li><a href="#section10">Псевдоэлементы ::before и ::after</a></li>
+                </ul></li>
+            </ul>
+            <h3 id="section1">Что такое псевдоклассы (pseudo classes)</h3>
+            <p>Псевдокласс (pseudo class) - это специальное ключевое слово, которое добавляется к css-селектору (css selector), с помощью которого можно задавать стили для отображения HTML-элементов при различных факторах. К примеру, можно задать CSS-стили для HTML-элемента на который пользователь навел курсор мыши.</p>
+            <p>Если вы еще не знакомы с понятием CSS-селектор (css selector) и не знаете, что такое CSS-селекторы (css selectors), прочитайте об этом статью или посмотрите видеоурок из курса HTML/CSS Advanced, а для закрепления ваших знаний, пройдите интерактивные упражнения.</p>
+            <p>Псевдоклассы задаются через двоеточие “:”, далее идет название псевдокласса, например, так задается псевдокласс :hover для HTML-тега: a:hover {…}.</p>
+            <h3 id="section2">Псевдокласс :hover</h3>
+            <p>Псевдокласс :hover позволяет задавать CSS-стили при наведении курсора мыши на HTML-элемент.</p>
+            <div class="example">
+                <h3>Наведите курсор мыши на ссылку Link и вы увидите, что цвет ссылки, при наведении на него курсора мыши, изменился на цвет “brown”:</h3>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+                <a class="hover" href="#">Link</a>
+            </div>
+            <h3 id="section3">Псевдокласс :active</h3>
+            <p>С помощью псевдокласса :active мы можем задавать CSS-стили в момент клика на HTML-элемент мышью</p>
+            <div class="example">
+                <h3>Наведите курсор мыши на надпись Link, затем нажмите левой кнопкой мыши на надпись Link и не отпускайте кнопку мыши. Вы увидите, что ссылка в момент клика мышью стала зеленого цвета:</h3>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+                <a class="active" href="#">Link</a>
+            </div>
+            <p>Псевдоклассы :hover и :active работают не только с HTML-тегом “a”. Вы можете заменить в CSS-стилях “a” на любой другой HTML-тег или название классы и стили применятся к этому HTML-элементу.</p>
+            <h3 id="section4">Псевдокласс :focus</h3>
+            <p>Псевдокласс :focus позволяет задавать стили для HTML-тегов таких как "input", "textarea", "checkbox" и других при установке курсора мыши в этот элемент.</p>
+            <div class="example">
+                <h3>Посмотрите пример ниже с HTML-формой. Если вы установите курсор мыши в поле "input", фоновый цвет поля изменится:</h3>
+                <form action="#">
+                    <input type="text">
+                    <button>Send</button>
+                  </form>
+            </div>
+            <h3 id="section5">Псевдоклассы :first-child и :last-child</h3>
+            <p>С помощью псевдокласса :first-child вы можете задавать стили для первого HTML-элемента, который является первым у своего родителя (parent).</p>
+            <div class="example">
+                <h3>Чтобы было проще понять как работает :first-child, посмотрите пример ниже. В маркированном списке выделяется цветом первый элемент "li", а его родителем (parent) является тег "ul":</h3>
+                <ul>
+                    <li class="first-child">1</li>
+                    <li class="first-child">2</li>
+                    <li class="first-child">3</li>
+                    <li class="first-child">4</li>
+                    <li class="first-child">5</li>
+                  </ul>
+            </div>
+            <p>А с помощью псевдокласса :last-child вы можете задавать CSS-стили для последнего HTML-элемента.</p>
+            <div class="example">
+                <h3>Посмотрите пример ниже. Благодаря псевдоклассу :last-child выделяется цветом последний HTML-элемент "li" в маркированном списке:</h3>
+                    <ul>
+                        <li class="last-child">1</li>
+                        <li class="last-child">2</li>
+                        <li class="last-child">3</li>
+                        <li class="last-child">4</li>
+                        <li class="last-child">5</li>
+                      </ul>    
+            </div>
+            <p>Для того, чтобы применялись стили к HTML-элементу, заданных с помощью псевдоклассов :first-child и :last-child, у элемента должен быть родитель (parent). Если родитель отсутствует, тогда стили не сработают.</p>
+            <div class="example">
+                <h3>Посмотрите пример ниже. У тега "span" есть родительский тег "div" и стили с :first-child работают, а для "span" без родительского тега :first-child и :last-child не будут работать:</h3>
+                <span>
+                    Для этого SPAN не работает
+                </span>
+                <div>
+                    <span>
+                        А для этого SPAN работает
+                    </span>
+                </div>    
+            </div>
+            <h3 id="section6">Псевдоклассы :first-of-type и :last-of-type</h3>
+            <p>С помощью псевдоклассов :first-of-type и :last-of-type можно задавать стили для первого и последнего потомка (child) соответсвенно своего типа среди детей (child) его родителя (parent).</p>
+            <p>Определение звучит сложно и не очень понятно. Поэтому лучше сразу перейти к примерам, чтобы вы быстро поняли как работают псевдоклассы  :first-of-type и :last-of-type.</p>
+            <div class="example">
+                <h3>В этом примере, с помощью псевдокласса  :first-of-type можно выделить цветом все первые элементы "li" в маркированном списке с текстом “First”:</h3>
+                <ul>
+                    <li class="first-of-type">First</li>
+                    <li class="first-of-type">Second</li>
+                    <li class="first-of-type">Third</li>
+                </ul>    
+                <ul>
+                    <li class="first-of-type">First</li>
+                    <li class="first-of-type">Second</li>
+                    <li class="first-of-type">Third</li>
+                </ul>
+                <ul>
+                    <li class="first-of-type">First</li>
+                    <li class="first-of-type">Second</li>
+                    <li class="first-of-type">Third</li>
+                </ul>
+            </div>
+            <div class="example">
+                <h3>Точно такой же результат вы можете получить и с помощью псевдокласса :first-child, но не сможете выделить все последние элементы маркированного списка с надписью Third во всех вложенностях с помощью :last-child, зато такой результат вы сможете получить с помощью псевдокласса :last-of-type:</h3>
+                <ul>
+                    <li class="last-of-type">First</li>
+                    <li class="last-of-type">Second</li>
+                    <li class="last-of-type">Third</li>
+                </ul>    
+                <ul>
+                    <li class="last-of-type">First</li>
+                    <li class="last-of-type">Second</li>
+                    <li class="last-of-type">Third</li>
+                </ul>    
+                <ul>
+                    <li class="last-of-type">First</li>
+                    <li class="last-of-type">Second</li>
+                    <li class="last-of-type">Third</li>
+                </ul>
+            </div>
+            <h3 id="section7">Псевдокласс :nth-child</h3>
+            <p>С помощью псевдокласса :nth-child вы можете задавать стили для одного или более HTML-элементов, которые будут основываться на их позиции среди HTML-элементов соседей.</p>
+            <div class="example">
+                <h3>Например, в нашем любимом маркированном списке мы хотим выделить цветом какой-то определенный элемент "li" под номером три. Для этого в CSS-стилях нам достаточно добавить псевдокласс  :nth-child к "li" вот таким образом:  li:nth-child(3) и в результате мы сделаем то, что хотели:</h3>
+                <ul>
+                    <li class="nth-child">1</li>
+                    <li class="nth-child">2</li>
+                    <li class="nth-child">3</li>
+                    <li class="nth-child">4</li>
+                    <li class="nth-child">5</li>
+                  </ul>
+            </div>
+            <div class="example">
+                <h3>
+                    Но этим возможности псевдокласса :nth-child не ограничиваются и мы можем выделить все нечетные HTML-элементы "li" из нашего маркированного списка, написав несколько символов кода: li:nth-child(odd). Ключевое слово “odd” внутри скобок псевдокласса :nth-child как раз задает этот правило:</h3>
+                        <ul>
+                            <li class="nth-child-odd">1</li>
+                            <li class="nth-child-odd">2</li>
+                            <li class="nth-child-odd">3</li>
+                            <li class="nth-child-odd">4</li>
+                            <li class="nth-child-odd">5</li>
+                          </ul>
+            </div>
+            <div class="example">
+                <h3>А с помощью ключевого слова even внутри скобок псевдокласса :nth-child мы можем наоборот выделить цветом все четные HTML-элементы "li" из нашего маркированного списка:</h3>
+                <ul>
+                    <li class="nth-child-even">1</li>
+                    <li class="nth-child-even">2</li>
+                    <li class="nth-child-even">3</li>
+                    <li class="nth-child-even">4</li>
+                    <li class="nth-child-even">5</li>
+                  </ul>
+            </div>
+            <p>И на этом возможности псевдокласса  :nth-child не заканчиваются и мы можем писать даже сложные правила выборки HTML-элементов к которым применить CSS-стили с помощью формул. Об этом вы можете прочитать в документации к  псевдоклассу :nth-child.</p>
+            <h3 id="section8">Псевдокласс :not</h3>
+            <p>С помощью псевдокласса :not вы можете задать CSS-стили для которые не будут соответствовать заданному селектору.</p>
+            <p>Простыми словами, вы можете в псевдокласс :not, в его скобки, указать любой класс или элемент и CSS-стили будут заданы всем соседям данного элемента, кроме него самого.</p>
+            <div class="example">
+                <h3>Если все еще непонятно, что такое псевдокласс :not, вот вам наглядный пример, с моим любимым маркированным списком. В четвертый  HTML-элемент "li" мы задали класс .not-color и задали стили для "li", указав в скобках название класса - :not(.not-color). И в результате у нас окрашиваются все другие элементы "li", кроме "li" с классом .not-color:</h3>
+                <ul>
+                    <li class="not">1</li>
+                    <li class="not">2</li>
+                    <li class="not">3</li>
+                    <li class="not-color">4</li>
+                    <li class="not">5</li>
+                  </ul>
+            </div>
+            <p>И если вы переместите класс .not-color соседний "li", выше или ниже, будут закрашиваться цветом все "li", кроме "li" с классом .not-color.</p>
+            <h3 id="section9">Что такое псевдоэлементы (pseudo elements)</h3>
+            <p>Псевдоэлемент (pseudo element) - это это специальное ключевое слово, которое добавляется к css-селектору и позволяет задавать стили для части выбранного HTML-элемента.</p>
+            <h3 id="section10">Псевдоэлементы ::before и ::after</h3>
+            <p>Псевдоэлементы  ::before и ::after используются очень часто при верстке сайтов на профессиональном уровне.</p>
+            <p>Суть этих псевдоэлементов очень простая: С помощью псевдоэлемента ::before вы можете присоединить к существующему HTML-тегу какой-то контент ДО этого HTML-элемента, а с помощью псевдоэлемента ::after ПОСЛЕ HTML-элемента.</p>
+            <div class="example">
+                <h3>И сразу давайте перейдем к примеру ::before и ::after. У нас есть HTML-тег "p" и в него помещен текст “Have a good day!”. И с помощью псевдоклассов  ::before и ::after мы добавляем “сердечки” слева и справа от надписи “Have a good day!”:
+                </h3>
+                <p class="before-after">Have a good day!</p>
+            </div>
+            <p>Обратите внимание, что в отличии от псевдоклассов, перед псевдоэлементами ставится два двоеточия.</p>    
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="logo"></div>
+    </footer>
+    
+</body>
+</html>
